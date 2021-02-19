@@ -10,7 +10,7 @@
     "vue-build": "cross-env NODE_ENV=development webpack --config build/webpack.vue.js",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "server": "node server.js",
-    "start": "live-server ./dist/vueAdmin"
+    "start": "live-server ./dist"
   },
   "author": "",
   "license": "ISC",
