@@ -1,4 +1,4 @@
-import Vue from 'vue' // 完整版的vuejs
+import Vue from 'vue/dist/vue.js'; // 完整版的vuejs
 import VueRouter from 'vue-router'
 import demo from './modules/demo.js';
 Vue.use(VueRouter)
@@ -8,7 +8,7 @@ const router = new VueRouter({
     // https://blog.csdn.net/qyl_0316/article/details/109116953
     // mode: 'history', // 访问路径不带#号  访问路径带#  hash 默认是hash模式
     // base: '/page/aa',  // 配置单页应用的基路径
-    base: IS_DEV === "false" ? "vueAdmin" : "/",
+    base: IS_DEV === "false" ? "/vueAdmin" : "/",
     routes: [
         {
             path: '/',

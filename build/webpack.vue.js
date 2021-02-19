@@ -5,7 +5,8 @@ module.exports = {
     entry: {
         vue: [
             'vue/dist/vue.js',
-            'vue-router'
+            'vue-router',
+            "vuex"
         ]
     },
     output: {

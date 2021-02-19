@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 const resolve = dir => path.join(__dirname, '..', dir)
-const assetsPublicPath = './vueAdmin'
+const assetsPublicPath = '/vueAdmin'
 module.exports = {
     // 入口文件配置
     // entry: './src/index.js',  //webpack4 默认的入口文件名就叫做index
@@ -22,12 +22,9 @@ module.exports = {
         // 输出文件名字
         // filename: 'bundle.js',
         // 2. 多入口无法对应一个固定的出口, 所以修改filename为[name]变量，意为以入口之名为出口之名
-        filename: 'js/[name].[hash:8].bundle.js',
-        // : assetsPublicPath 
-        // publicPath: process.env.NODE_ENV === 'production'
-        // ? config.build.assetsPublicPath
-        // : config.dev.assetsPublicPath
-        publicPath: process.env.NODE_ENV === 'production' ? assetsPublicPath : './'  //出口文件dist的放置位置相对于根目录'/'
+        filename: 'assets/js/[name].[hash:8].bundle.js',
+        publicPath: process.env.NODE_ENV === 'production' ? assetsPublicPath : '/'  //出口文件dist的放置位置相对于根目录'/'
+        // publicPath: "/assets/",
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],

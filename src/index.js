@@ -2,7 +2,7 @@ import App from './App.vue';
 import Vue from 'vue/dist/vue.js';
 import "./assets/css/common.less"
 import '@babel/polyfill'  //为了兼容ES6高级新语法
-import router from './router/index'
+import router from './router'
 import store from './store'//vueX
 import ElementUI from 'element-ui';
 import $ from 'jquery'
@@ -19,13 +19,13 @@ Vue.use(ElementUI);
 //     'color': 'green',
 //     'fontSize': '25px'
 // })
-$(function () {
-    $('<div></div>').html('index').appendTo('body')
-})
-$('h2').css({
-    'color': 'green',
-    'fontSize': '25px'
-})
+// $(function () {
+//     $('<div></div>').html('index').appendTo('body')
+// })
+// $('h2').css({
+//     'color': 'green',
+//     'fontSize': '25px'
+// })
 // 将模块进行动态导入---返回一个Promise对象
 // function getComponent() {
 //     return import('jquery').then(({ default: $ }) => {
